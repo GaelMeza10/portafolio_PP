@@ -4,7 +4,7 @@ draft = false
 title = 'Practica 1:Elementos basicos de los lenguajes de programacion'
 +++
 
-# **Practica 1: Identificar los elementos de los lenguajes de programacion**
+# **Reporte: Elementos Fundamentales de Lenguajes de Programación en el Código C de Gestión de Biblioteca**
 
 ***
 * ### **Docente:** Carlos Gallegos
@@ -13,151 +13,107 @@ title = 'Practica 1:Elementos basicos de los lenguajes de programacion'
 ***
 
 ***
-# Reporte de Análisis del Código
 
-## 1. Nombres
+## Introducción
 
-### Variables:
-- static_var
-- bss_var
-- library
-- members
-- bookCount
-- memberCount
-- choice
-- new_book
-- new_member
-- current
-- bookFound
-- memberFound
-- id
-- name
-- title
-- author
-- genre
-- issued_books
-- quantity
-- due_date
-- return_date
-- file
-- fp
-- temp
-- buffer
+En este reporte, voy a analizar el código C que se nos proporcionó, identificando los elementos clave de los lenguajes de programación que encontré. Mi objetivo es mostrar que entiendo cómo estos elementos trabajan juntos en un programa real, usando ejemplos directos del código.
 
-### Funciones:
-- genreToString
-- addBook
-- findBookById
-- displayBooksRecursive
-- displayBooks
-- addMember
-- issueBook
-- returnBook
-- freeLibrary
-- freeMembers
-- saveLibraryToFile
-- loadLibraryFromFile
-- saveMembersToFile
-- loadMembersFromFile
-- displayMembers
-- searchMember
-- removeBook
-- removeMember
-- updateBookInfo
-- updateMemberInfo
-- validateInput
-- sortBooks
-- sortMembers
-- main
+## Análisis
 
-### Constantes:
-- FICTION
-- NON_FICTION
-- SCIENCE
-- HISTORY
-- FANTASY
-- BIOGRAPHY
-- OTHER
-- MAX_BOOKS
-- MAX_MEMBERS
-- MAX_ISSUED_BOOKS
-- MAX_STRING_LENGTH
+### 1. Nombres (Identificadores)
 
-### Archivos:
-- "memory_management.h"
-- "library.txt"
-- "members.txt"
-- "config.h"
-- "utils.h"
+Aquí encontré los nombres que se usan para todo: variables como library, members, bookCount; funciones como addBook, displayBooks, saveLibraryToFile; y constantes como FICTION, NON_FICTION. Estos nombres hacen que el código sea más fácil de leer. Por ejemplo, la función addBook claramente indica que su propósito es añadir un libro.
 
-## 2. Objetos
 
-- **Variables de tipo struct**: `book_t`, `member_t`.
-- **Objetos asignados en el heap**: `malloc`, `realloc`.
-- **Objetos de tipo FILE***: `library.txt`, `members.txt`.
-- **Punteros**: `book_t *current`, `member_t *new_member`.
+En el archivo memory_management.h y su correspondiente archivo .c, encontré más nombres relacionados con la gestión de memoria. Estas funciones y variables están diseñadas para realizar un seguimiento de la memoria dinámica del programa, como heap_allocations, heap_deallocations, stack_allocations, y stack_deallocations. Estas variables permiten contar las asignaciones y liberaciones de memoria en el heap y la pila.
 
-## 3. Entornos
 
-- **Global**: `static_var`, `bss_var`, `library`, `members`.
-- **Funcional**: Variables dentro de funciones (`choice`, `current`).
-- **Bloque**: Variables dentro de `{}` en estructuras de control como `for`, `if`, etc.
+### 2. Objetos:
+Vi que las variables guardan datos, y las estructuras book_t y member_t son como "cajas" que guardan varios datos juntos. Los archivos (FILE*) son objetos que permiten que el programa lea y escriba información en el disco duro. También encontré punteros, que guardan direcciones de memoria, como book_t *library.
 
-## 4. Bloques
 
-Los bloques `{}` delimitan funciones y estructuras de control. Algunas estructuras de control utilizadas fueron: `if`, `switch`, `while`.
+En el archivo memory_management.c, se introducen objetos relacionados con la gestión de memoria. La estructura MemoryRecord guarda información sobre las asignaciones de memoria en el heap, como el puntero y el tamaño de la memoria asignada. Esto permite llevar un registro de las asignaciones dinámicas realizadas a través de la función addMemoryRecord.
 
-## 5. Alcance
 
-- **Global**: Variables accesibles en todo el programa.
-- **Local**: Variables dentro de funciones.
-- **Estructuras**: Accesibles sólo mediante `.` (ej. `book.id`).
-- **Archivo**: Variables `static` en archivos `.c`.
+###3. Entornos:
+Hay variables que se pueden usar en todo el programa (como static_var), y otras que solo funcionan dentro de una función (como library en main). También hay "bloques" de código donde las variables solo existen ahí.
 
-## 6. Administración de Memoria
 
-- **Estática**: `static_var` (datos), `bss_var` (BSS).
-- **Automática**: Variables locales (`choice`, `current`).
-- **Dinámica**: `malloc`, `realloc` (para `book_t`, `member_t`).
-- **Liberación**: `freeLibrary()`, `freeMembers()`.
-- **Monitoreo**: `incrementHeapAllocations`, `displayMemoryUsage`.
+En el archivo memory_management.c, el uso de variables globales como heap_allocations y stack_allocations permite que estos contadores sean accesibles en todo el programa. Esto permite llevar un registro global de las asignaciones y liberaciones de memoria, lo cual es útil para la gestión de la memoria.
 
-## 7. Expresiones
 
-- **Aritméticas**: `bookCount + 1`, `memberCount - 1`.
-- **Lógicas**: `if (!library)`, `while (current != NULL)`.
-- **Asignación**: `new_book->id = id;`, `*library = new_book;`.
-- **Casting**: `(book_t *)malloc(sizeof(book_t))`.
-- **Acceso a miembros**: `current->id`, `new_book->title`.
+### 4. Bloques:
+Los bloques son las secciones de código dentro de llaves {}. Ayudan a organizar el código y a definir dónde funcionan las variables. Los "case" en el "switch" también son bloques. Por ejemplo, el cuerpo de la función addBook está delimitado por llaves:
 
-## 8. Comandos (Sentencias)
 
-- **Declaraciones**: `int bookID = 0;`, `member_t *new_member;`.
-- **Asignaciones**: `bookFound->quantity--;`, `file = fopen("library.txt", "w");`.
-- **Llamadas a funciones**: `addBook(&library, &bookCount);`.
-- **Retorno**: `return 0;`.
-- **Control de flujo**: `if`, `else`, `switch`, `while`, `do-while`, `for`, `break`, `continue`.
+void addBook(book_t **library, int* count ) {
+// ... código dentro de la función ...
+} 
+En el archivo memory_management.c, los bloques de código dentro de las funciones como displayMemoryUsage, incrementHeapAllocations y incrementStackAllocations están definidos con llaves {}. Además, el uso de directivas de preprocesador #if y #else en el código permite condicionar la compilación de ciertas funciones dependiendo de la definición de la macro MEMORY_MANAGEMENT_DISPLAY.
 
-## 9. Secuencia
 
-El programa ejecuta las instrucciones una tras otra, en el orden en que están escritas. A menos que haya un `if`, un `while`, o una llamada a función, el programa sigue una línea recta. Esto es el flujo de ejecución secuencial.
+### 5. Alcance (Scope):
+Esto es como el "territorio" de cada variable. Algunas son "globales" y otras "locales". Por ejemplo, las variables dentro de main solo se pueden usar en main. Como la variable choice.
 
-## 10. Selección
 
-- **if-else**: Para decisiones simples.
-- **switch-case**: Para opciones múltiples (`switch (choice)`).
+En el archivo memory_management.c, las variables globales como heap_allocations, heap_deallocations, stack_allocations, y stack_deallocations son utilizadas en todo el código para realizar un seguimiento de las asignaciones y liberaciones de memoria, lo que les da un alcance global.
 
-## 11. Iteración (Bucles)
 
-- **for**, **while**, **do-while**: Utilizados para listas enlazadas y recorridos.
+### 6. Administración de Memoria:
+Vi que el programa usa malloc y realloc para pedir memoria cuando la necesita, y free para liberarla cuando ya no la usa. Esto es importante para no desperdiciar memoria. Por ejemplo: book_t *new_book = (book_t *)malloc(sizeof(book_t));. También encontré variables estáticas y automáticas.
 
-## 12. Recursión
 
-La función `displayBooksRecursive()` se llama a sí misma para recorrer la lista de libros.
+En el archivo memory_management.c, las funciones como incrementHeapAllocations y incrementHeapDeallocations gestionan las asignaciones y liberaciones de memoria en el heap. La función addMemoryRecord guarda un registro de cada asignación de memoria, lo que permite hacer un seguimiento de las direcciones de memoria y sus tamaños. Además, la función removeMemoryRecord libera la memoria asociada con una dirección específica cuando se libera la memoria dinámica.
 
-## 13. Subprogramas (Funciones)
 
-Funciones especializadas para manejar libros, miembros y archivos. 
-Funciones auxiliares como `genreToString` para conversión de datos.
+### 7. Expresiones:
+Aquí encontré operaciones como comparaciones (current->id == bookID), asignaciones (new_book->next = *library), y operaciones matemáticas (bookFound->quantity--).
+
+
+En el archivo memory_management.c, hay expresiones como heap_allocations++ que incrementan los contadores de asignación de memoria en el heap. Esto es un ejemplo de cómo las expresiones se usan para modificar el estado de las variables globales.
+
+
+### 8. Comandos (Sentencias):
+Son las instrucciones que el programa ejecuta, como int choice = 0;, addBook(&library, &bookCount);, y return 0;.
+
+
+En el archivo memory_management.c, hay sentencias como malloc y free, que son fundamentales para la gestión de memoria dinámica. Por ejemplo, MemoryRecord *record = (MemoryRecord *)malloc(sizeof(MemoryRecord)); se usa para asignar memoria dinámicamente a un nuevo registro de memoria.
+
+
+### 9. Secuencia:
+El programa ejecuta las instrucciones una tras otra, en el orden en que están escritas. A menos que haya un if, un while, o una llamada a función, el programa sigue una línea recta. Esto es el flujo de ejecución secuencial.
+### 10. Selección (Condicionales):
+El programa usa if, else, y switch para tomar decisiones y ejecutar diferentes partes del código según las condiciones. Como el siguiente ejemplo:
+switch (choice) {
+case 1:
+addBook(&library, &bookCount);
+break;
+case 2:
+displayBooks(library);
+break;
+//...
+} 
+
+
+### 11. Iteración (Bucles):
+Los bucles while y for se usan para repetir partes del código varias veces, como cuando se busca un libro en la lista. Por ejemplo, en la función findBookById:
+
+
+while (current) {
+if (current->id == bookID) {
+return current;
+}
+current = current->next;
+} 
+Este bucle recorre la lista de libros hasta encontrar el libro con el ID buscado, o hasta llegar al final de la lista.
+
+
+En el archivo memory_management.c, el bucle while (current) se usa en la función displayMemoryUsage para recorrer todos los registros de memoria en el heap y mostrarlos. Este es un ejemplo de cómo los bucles se pueden usar para iterar a través de estructuras de datos, como listas de memoria dinámica.
+
+
+### 12. Recursión:
+La función displayBooksRecursive se llama a sí misma, lo que permite recorrer la lista de libros de forma elegante.
+### 13. Subprogramas (Funciones):
+El código está dividido en muchas funciones pequeñas, cada una con una tarea específica. Esto hace que el código sea más fácil de entender y de mantener. También, funciones auxiliares como displayMemoryUsage y incrementHeapAllocations se encargan del monitoreo y gestión de la memoria.
 
 
