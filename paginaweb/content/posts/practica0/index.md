@@ -2,7 +2,7 @@
 date = '2025-02-21T10:18:17-08:00'
 draft = false 
 
-title = 'Practica0: Markdown,Git & Hugo'
+title = 'Practica 0: Markdown,Git & Hugo'
 +++
 
 
@@ -20,117 +20,24 @@ En esta primera sesión realizamos un breve ejercicio utilizando **Visual Studio
 **`.md`**.
 
 ***
-<!-- Esto es un comentario bro-->
+Posteriormente, el docente comenzó a explicar las principales sintaxis de Markdown, mostrando cómo se pueden utilizar diferentes elementos para estructurar el contenido. Algunos de los aspectos que aprendimos fueron:
+* **Encabezados:** Utilizando el símbolo # seguido de un espacio, se pueden crear distintos niveles de encabezados, desde el nivel 1 (#) hasta el nivel 6 (######).
+* **Estilos de texto:** Aprendimos a aplicar diferentes formatos de texto, como:
+* **Negritas:** Al encerrar el texto entre dos asteriscos (**texto**).
+* **Cursiva:** Al utilizar un solo asterisco (*texto*).
+* **Tachado:** Al envolver el texto entre dos virgulillas (~~texto~~).
+* **istas:** Creamos listas tanto ordenadas como desordenadas:
+* **Listas desordenadas:** Usando guiones (-), asteriscos (*) o signos más (+).
+* **Listas ordenadas:** Utilizando números seguidos de un punto (1.).
+* **Enlaces e imágenes:** Aprendimos a insertar enlaces mediante la sintaxis **\[texto](URL)** y a agregar imágenes utilizando **"\[texto alternativo](URL_de_la_imagen)"**. También vimos cómo combinar ambos elementos, creando imágenes con enlaces.
+* **Bloques de código:** Descubrimos cómo insertar bloques de código de cualquier lenguaje de programación utilizando tres acentos invertidos () seguidos del nombre del lenguaje **(` javascript , ```python `, etc.)**. Esto permite resaltar la sintaxis del lenguaje.
+* **Tablas:** Aprendimos a crear tablas simples usando tuberías (|) y guiones (-).
+* **Notas o citas:** Con el símbolo mayor que (>) se pueden agregar citas o comentarios destacados.
+* **Divisiones horizontales:** Insertamos divisiones horizontales utilizando tres guiones (---).
+* **Menciones:** También vimos cómo mencionar a otras personas usando el símbolo @ seguido del nombre de usuario.
 
-# Encabezado 1
+En resumen, esta primera sesión nos permitió conocer la estructura básica de Markdown y cómo utilizar sus principales funciones para organizar y formatear contenido de forma sencilla y efectiva.
 
-## Encabezado 2
-
-### Encabezado 3
-
-#### Encabezado 4
-
-##### Encabezado 5
-
-<!-- italicas -->
-Este es un texto en *italica* con asteriscos
-
-Este es un texto en _italica_ con guion bajo
-
-<!-- Negritas -->
-
-Este es un texto en **negritas** con asterisco
-
-Este es un texto en __negritas__ con guion bajo
-
-<!-- Tachado -->
-
-Este es un texto ~~tachado~~
-
-<!-- UL -->
-
-* Elemento 1
-* Elemento 2
-* Elemento 3
-* Elemento 4
-  * Elemento 4.1 con tabulador
-<!-- OL -->
-
-1. Elemento 1
-1. Elemento 2
-1. Elemento 3
-   1. Elemento 3.1
-   1. Elemento 3.2
-   <!-- Se agrega 1. para que sea sencillo si se hace algun cambio-->
-
-<!-- Enlaces -->
-
-[Texto de enlace](direccion de enlace "Texto del tooptip")
-
-[UABC](https://www.uabc.mx/ )
-
-
-[UABC](https://www.uabc.mx/ "Sitio Universitario")
-
-<!-- Imagenes -->
-
-![Texto alternativo](https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg)
-
-![Texto alternativo](https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg "UABC FOTO")
-
-[![CLick boton](https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg)]((https://www.uabc.mx/) "UABC FOTO")
-
-<img src="https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg" alt="foto uabc" width="120" height="160">
-
-<!-- Bloques de codigo -->
-
-```
-Este es un bloque de codigo 
-bloque de codigo dos
-```
-
-```python
-print("Hola Mundo!")
-```
-
-```javascript
-console.log('Hola Mundo!')
-const test =()
-```
-
-```html
-<h1> Hola mundo! </h1>
-```
-
-<!-- Tablas -->
-
-| Productos | Precio | Cantidad |
-| - | - | - |
-| Laptop | 3,3 | 2 |
-| Mouse | 3,3 | 2 |
-
-<!-- Notas -->
-
-> Esto es una nota
-> 
-> Esto solo aplica para la version 3.1 de python
-
-<!-- Tareas -->
-
-* [x] Primera Tarea
-* [ ] Segunda Tarea
-* [ ] TerceraTarea
-  
-<!-- Divisiones horizontales -->
-
-***
---- 
-___
-
-<!-- Menciones -->
-<!-- Especial para github o gitlab solo ahi se puede ver -->
-
-@darthrookie :+1: :smile:
 
 ## **Segunda sesión. Uso de Git y GitHub.**
 En la segunda sesión aprendimos a utilizar Git, un sistema de control de versiones que permite gestionar cambios en el código, y GitHub, una plataforma que facilita el alojamiento de proyectos y el trabajo colaborativo utilizando Git. Esto nos permitió comprender cómo gestionar repositorios y trabajar en equipo de forma más eficiente.
