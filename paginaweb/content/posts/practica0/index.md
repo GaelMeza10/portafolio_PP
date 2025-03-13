@@ -1,11 +1,26 @@
 +++
 date = '2025-02-21T10:18:17-08:00'
-draft = false
+draft = false <!-- si es false se hace publico y ya no un borrador -->
+
 title = 'Practica0: Markdown,Git & Hugo'
 +++
 
 
-<!-- Esto es un comentario -->
+# **Práctica 0: Uso de repositorios**
+
+***
+* ### **Docente:** Carlos Gallegos
+* ### **Materia:** Paradigmas de Programacion
+* ### **Alumno y Matricula:** Meza Cruz Gael Alfredo 376163
+***
+
+***
+## **Primera sesión: Sintaxis y uso de Markdown**
+En esta primera sesión realizamos un breve ejercicio utilizando **Visual Studio Code**, donde trabajamos con **Markdown**, un lenguaje de marcado ligero que permite dar formato al texto. Para ello, creamos un archivo con la extensión 
+**`.md`**.
+
+***
+<!-- Esto es un comentario bro-->
 
 # Encabezado 1
 
@@ -59,18 +74,18 @@ Este es un texto ~~tachado~~
 
 <!-- Imagenes -->
 
-![Texto alternativo](https://www.uabc.mx/wp-content/uploads/2024/01/carusel_img_7.jpg)
+![Texto alternativo](https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg)
 
-![Texto alternativo](https://www.uabc.mx/wp-content/uploads/2024/01/carusel_img_7.jpg "UABC FOTO")
+![Texto alternativo](https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg "UABC FOTO")
 
-[![CLick boton](https://www.uabc.mx/wp-content/uploads/2024/01/carusel_img_7.jpg)]((https://www.uabc.mx/) "UABC FOTO")
+[![CLick boton](https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg)]((https://www.uabc.mx/) "UABC FOTO")
 
-<img src="https://www.uabc.mx/wp-content/uploads/2024/01/carusel_img_7.jpg" alt="foto uabc" width="120" height="160">
+<img src="https://www.uabc.mx/wp-content/uploads/2025/02/C1.jpg" alt="foto uabc" width="120" height="160">
 
 <!-- Bloques de codigo -->
 
 ```
-Este es un bloque de codigo papu
+Este es un bloque de codigo 
 bloque de codigo dos
 ```
 
@@ -117,3 +132,55 @@ ___
 
 @darthrookie :+1: :smile:
 
+## **Segunda sesión. Uso de Git y GitHub.**
+En la segunda sesión aprendimos a utilizar Git, un sistema de control de versiones que permite gestionar cambios en el código, y GitHub, una plataforma que facilita el alojamiento de proyectos y el trabajo colaborativo utilizando Git. Esto nos permitió comprender cómo gestionar repositorios y trabajar en equipo de forma más eficiente.
+***
+#### Los objetivos de esta sesión fueron:
+* Entender qué es Git y GitHub.
+* Aprender los comandos básicos de Git.
+* Crear y gestionar un repositorio en GitHub.
+***
+#### Comandos básicos de Git:
+* **git init:** Inicializar un repositorio.
+* **git add .** cambios al área de preparación.
+* **git commit -m "mensaje":** Confirmar cambios.
+* **git push:** Subir cambios al repositorio remoto.
+* **git pull:** Traer cambios desde el repositorio remoto.
+***
+Durante la sesión, creamos un repositorio en GitHub y lo enlazamos con nuestro proyecto local utilizando Git Bash. Posteriormente, subimos el archivo Index.md creado en la primera sesión al repositorio remoto utilizando los comandos aprendidos. Esto nos permitió comprender cómo trabajar con Git y GitHub, gestionar versiones del proyecto y colaborar con otros usuarios de forma eficiente.
+
+El uso de Git Bash fue fundamental para ejecutar los comandos de Git, permitiéndonos realizar tareas como inicializar repositorios, agregar archivos, realizar confirmaciones y subir cambios a GitHub. Con esto logramos establecer la conexión entre nuestro proyecto local y el repositorio remoto, facilitando así la administración del proyecto y la colaboración en equipo.
+
+***
+
+## **Tercera sesión: Generar páginas estáticas con Hugo y GitHub Actions**
+
+En esta tercera sesión aprendimos a utilizar Hugo, un framework para generar sitios web estáticos de forma rápida y sencilla, y a desplegarlo automáticamente utilizando GitHub Actions. Hugo permite crear sitios web mediante comandos simples, organizando el contenido en carpetas específicas y utilizando archivos en formato Markdown para agregar texto e imágenes.
+
+#### Los objetivos de esta práctica fueron:
+* Aprender qué es Hugo.
+* Crear una página estática con Hugo.
+* Automatizar despliegues con GitHub Actions.
+
+***
+
+Para trabajar con Git, utilizamos Git Bash, una terminal que nos permitió ejecutar comandos de Git en un entorno similar a Linux, facilitando la gestión del repositorio y el despliegue del sitio web.
+Primero, instalamos Hugo y creamos un nuevo sitio con el comando:
+```
+hugo new site nombre-del-sitio
+```
+Esto generó la estructura del proyecto, donde en la carpeta **content/** agregamos páginas mediante comandos como:
+```
+hugo new posts/mi-primer-post.md
+```
+Para visualizar el sitio localmente, usamos el comando:
+```
+hugo server
+```
+y accedimos a http://localhost:1313.
+
+Luego, añadimos un tema visual descargado desde la página de Hugo en el apartado de temas e hicimos cambios en el archivo **config.toml** para configurarlo. Después, aprendimos a automatizar el despliegue del sitio con GitHub Actions. 
+
+Creamos un repositorio en GitHub, subimos el proyecto utilizando Git Bash y añadimos un archivo de workflow en **`.github/workflows/hugo.yml`** que permitía generar y desplegar automáticamente el sitio en GitHub Pages cada vez que realizáramos cambios y los subiéramos a GitHub.
+
+El uso de Git Bash nos facilitó ejecutar comandos para inicializar el repositorio, realizar commits, vincular el proyecto a GitHub y desplegar automáticamente el sitio. Esto nos permitió comprender cómo crear, personalizar y publicar un sitio web estático utilizando Hugo, GitHub Actions y Git Bash. 
