@@ -1,6 +1,6 @@
 +++
 date = '2025-02-21T10:18:17-08:00'
-draft = false <!-- si es false se hace publico y ya no un borrador -->
+draft = false 
 
 title = 'Practica0: Markdown,Git & Hugo'
 +++
