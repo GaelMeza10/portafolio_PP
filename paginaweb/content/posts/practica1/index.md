@@ -4,7 +4,7 @@ draft = false
 title = 'Practica 1:Elementos basicos de los lenguajes de programacion'
 +++
 
-# **Reporte: Elementos Fundamentales de Lenguajes de Programación en el Código C de Gestión de Biblioteca**
+# **Reporte: Identificar los elementos fundamentales de los lenguajes de programacion**
 
 ***
 * ### **Docente:** Carlos Gallegos
@@ -35,7 +35,7 @@ Vi que las variables guardan datos, y las estructuras book_t y member_t son como
 En el archivo memory_management.c, se introducen objetos relacionados con la gestión de memoria. La estructura MemoryRecord guarda información sobre las asignaciones de memoria en el heap, como el puntero y el tamaño de la memoria asignada. Esto permite llevar un registro de las asignaciones dinámicas realizadas a través de la función addMemoryRecord.
 
 
-###3. Entornos:
+### 3. Entornos:
 Hay variables que se pueden usar en todo el programa (como static_var), y otras que solo funcionan dentro de una función (como library en main). También hay "bloques" de código donde las variables solo existen ahí.
 
 
@@ -45,10 +45,12 @@ En el archivo memory_management.c, el uso de variables globales como heap_alloca
 ### 4. Bloques:
 Los bloques son las secciones de código dentro de llaves {}. Ayudan a organizar el código y a definir dónde funcionan las variables. Los "case" en el "switch" también son bloques. Por ejemplo, el cuerpo de la función addBook está delimitado por llaves:
 
-
+```c
 void addBook(book_t **library, int* count ) {
 // ... código dentro de la función ...
 } 
+```
+
 En el archivo memory_management.c, los bloques de código dentro de las funciones como displayMemoryUsage, incrementHeapAllocations y incrementStackAllocations están definidos con llaves {}. Además, el uso de directivas de preprocesador #if y #else en el código permite condicionar la compilación de ciertas funciones dependiendo de la definición de la macro MEMORY_MANAGEMENT_DISPLAY.
 
 
@@ -84,27 +86,29 @@ En el archivo memory_management.c, hay sentencias como malloc y free, que son fu
 El programa ejecuta las instrucciones una tras otra, en el orden en que están escritas. A menos que haya un if, un while, o una llamada a función, el programa sigue una línea recta. Esto es el flujo de ejecución secuencial.
 ### 10. Selección (Condicionales):
 El programa usa if, else, y switch para tomar decisiones y ejecutar diferentes partes del código según las condiciones. Como el siguiente ejemplo:
+```c
 switch (choice) {
 case 1:
-addBook(&library, &bookCount);
+    addBook(&library, &bookCount);
 break;
 case 2:
-displayBooks(library);
+    displayBooks(library);
 break;
 //...
 } 
-
+```
 
 ### 11. Iteración (Bucles):
 Los bucles while y for se usan para repetir partes del código varias veces, como cuando se busca un libro en la lista. Por ejemplo, en la función findBookById:
 
-
+```c
 while (current) {
 if (current->id == bookID) {
-return current;
+    return current;
 }
 current = current->next;
 } 
+```
 Este bucle recorre la lista de libros hasta encontrar el libro con el ID buscado, o hasta llegar al final de la lista.
 
 
