@@ -84,8 +84,10 @@ En el archivo memory_management.c, hay sentencias como malloc y free, que son fu
 
 ### 9. Secuencia:
 El programa ejecuta las instrucciones una tras otra, en el orden en que están escritas. A menos que haya un if, un while, o una llamada a función, el programa sigue una línea recta. Esto es el flujo de ejecución secuencial.
+
 ### 10. Selección (Condicionales):
 El programa usa if, else, y switch para tomar decisiones y ejecutar diferentes partes del código según las condiciones. Como el siguiente ejemplo:
+
 ```c
 switch (choice) {
 case 1:
@@ -109,6 +111,7 @@ if (current->id == bookID) {
 current = current->next;
 } 
 ```
+
 Este bucle recorre la lista de libros hasta encontrar el libro con el ID buscado, o hasta llegar al final de la lista.
 
 
