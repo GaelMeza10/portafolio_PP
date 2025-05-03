@@ -1,8 +1,10 @@
-# Práctica 3: Aplicación de Haskell
++++
+date = '2025-03-12T21:10:19-07:00'
+draft = false
+title = 'Practica 3: Aplicación de Haskell'
++++
 
-**Fecha:** 12 de marzo de 2025  
-**Materia:** Programación Funcional  
-**Nombre del estudiante:** [Tu nombre aquí]
+# Práctica 3: Aplicación de Haskell
 
 ## ¿Qué hice en esta práctica?
 
@@ -36,12 +38,11 @@ El programa principal (`Main.hs`) hace lo siguiente:
 2. Corrí `stack build` para compilar el proyecto.
 3. Ejecuté el programa con `stack run` o directamente con `./Main.hs` si se le da permiso de ejecución.
 
-
 ## Conclusión
 
 Este proyecto fue muy útil para practicar Haskell en un contexto real. Aunque es una aplicación sencilla, cubre muchos aspectos del lenguaje: listas, entrada/salida, manejo de errores, y uso de librerías básicas. También me mostró cómo usar `stack` de manera más práctica.
 
-Aprendi: 
+Aprendí:
 - A manejar entrada del usuario desde consola.
 - A trabajar con listas y patrones en Haskell.
 - A compilar y ejecutar scripts Haskell usando Stack.
