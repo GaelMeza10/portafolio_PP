@@ -6,6 +6,12 @@ title = 'Practica 3: Aplicación de Haskell'
 
 # Práctica 3: Aplicación de Haskell
 
+***
+* ### **Docente:** Carlos Gallegos
+* ### **Materia:** Programación Funcional
+* ### **Alumno y Matrícula:** Meza Cruz Gael Alfredo 376163
+***
+
 ## ¿Qué hice en esta práctica?
 
 En esta práctica aprendí a usar **Haskell** para construir una pequeña aplicación de línea de comandos tipo *TODO list*. Seguí un tutorial en línea de la página [FP Complete](https://www.fpcomplete.com/haskell/tutorial/stack-script/) que explica cómo usar `stack` para correr scripts de Haskell. También usé un repositorio de ejemplo llamado [steadylearner/Haskell](https://github.com/steadylearner/Haskell/tree/main/examples/blog/todo) para entender mejor cómo se puede interactuar con el sistema y manejar listas desde la terminal.
