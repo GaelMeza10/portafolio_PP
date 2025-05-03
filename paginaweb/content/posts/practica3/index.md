@@ -4,7 +4,7 @@ draft = false
 title = 'Practica 3: Aplicación de Haskell'
 +++
 
-# Práctica 3: Aplicación de Haskell
+# **Reporte: Funcionamiento de una aplicación de Haskell**
 
 ***
 * ### **Docente:** Carlos Gallegos
@@ -12,9 +12,14 @@ title = 'Practica 3: Aplicación de Haskell'
 * ### **Alumno y Matrícula:** Meza Cruz Gael Alfredo 376163
 ***
 
+## Introduccion
+En este reporte, voy a hablar sobre **Haskell**, un lenguaje de programación funcional. El objetivo de esta práctica es entender y describir el funcionamiento de una aplicación sencilla tipo *TODO list*. A lo largo del proceso, voy a aprender como funciona este programa que  trabaja con listas, entradas y salidas de datos, y a utilizar **stack**, que es una herramienta que facilita la compilación y ejecución de proyectos en Haskell.
+
+Para hacer esto, seguí un tutorial online y usé un repositorio de ejemplo para entender cómo interactuar con el programa y gestionar las tareas desde la terminal. Al final, este ejercicio me ayudará a entender mejor cómo funciona Haskell y cómo puedo usarlo para resolver problemas simples en un entorno real.
+
 ## ¿Qué hice en esta práctica?
 
-En esta práctica aprendí a usar **Haskell** para construir una pequeña aplicación de línea de comandos tipo *TODO list*. Seguí un tutorial en línea de la página [FP Complete](https://www.fpcomplete.com/haskell/tutorial/stack-script/) que explica cómo usar `stack` para correr scripts de Haskell. También usé un repositorio de ejemplo llamado [steadylearner/Haskell](https://github.com/steadylearner/Haskell/tree/main/examples/blog/todo) para entender mejor cómo se puede interactuar con el sistema y manejar listas desde la terminal.
+Seguí un tutorial en línea de la página [FP Complete](https://www.fpcomplete.com/haskell/tutorial/stack-script/) que explica cómo usar `stack` para correr scripts de Haskell. También usé un repositorio de ejemplo llamado [steadylearner/Haskell](https://github.com/steadylearner/Haskell/tree/main/examples/blog/todo) para entender mejor cómo se puede interactuar con el sistema y manejar listas desde la terminal.
 
 ## Esta aplicación sirve para:
 
@@ -43,10 +48,22 @@ El programa principal (`Main.hs`) hace lo siguiente:
 1. Instalé **Stack**, una herramienta para compilar y ejecutar proyectos Haskell.
 2. Corrí `stack build` para compilar el proyecto.
 3. Ejecuté el programa con `stack run` o directamente con `./Main.hs` si se le da permiso de ejecución.
+## Explicación de los Archivos
+
+### 1. **Archivo `spec.hs`**
+Este archivo contiene pruebas unitarias para la función `editIndex`. Verifica que, al editar un índice en una lista de tareas, el cambio se realice correctamente. Usa `assert` para comprobar que la función devuelve el resultado esperado.
+
+### 2. **Archivo `main.hs`**
+Este archivo maneja la lógica principal de la aplicación de la lista de tareas. Permite interactuar con el usuario a través de la terminal para agregar, eliminar, editar, mostrar y gestionar las tareas. 
+
+
+Hice algunas pruebas agregando notas y jugando con los comandos disponibles.
+
+<img src="haskell.jpg" alt="Programa en Haskell" width="650"/>
 
 ## Conclusión
 
-Este proyecto fue muy útil para practicar Haskell en un contexto real. Aunque es una aplicación sencilla, cubre muchos aspectos del lenguaje: listas, entrada/salida, manejo de errores, y uso de librerías básicas. También me mostró cómo usar `stack` de manera más práctica.
+Este proyecto fue muy útil para practicar Haskell en un contexto real. Aunque es una aplicación sencilla, cubre muchos aspectos del lenguaje: listas, entrada/salida,etc. También me mostró cómo usar `stack` de manera más práctica.
 
 Aprendí:
 - A manejar entrada del usuario desde consola.
