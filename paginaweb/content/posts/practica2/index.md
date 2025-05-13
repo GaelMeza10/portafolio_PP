@@ -8,7 +8,7 @@ title = 'Practica 2: Analisis Programacion Orientada a Objetos.'
 
 ***
 * ### **Docente:** Carlos Gallegos
-* ### **Materia:** Programación Funcional
+* ### **Materia:** Paradigmas de Programacion
 * ### **Alumno y Matrícula:** Meza Cruz Gael Alfredo 376163
 ***
 ## Introduccion
