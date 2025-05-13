@@ -4,7 +4,7 @@ draft = false
 title = 'Practica 2: Analisis Programacion Orientada a Objetos.'
 +++
 
-# 📋 Reporte: Análisis del tres programas relacionados a la POO
+# Reporte: Análisis de tres programas relacionados a la POO
 
 ***
 * ### **Docente:** Carlos Gallegos
@@ -212,4 +212,4 @@ Después de analizar estos programas, me queda claro que:
 
 3. **Subtipos**: Se puede hacer sobrescritura de métodos en ambos lenguajes. Java tiene además los genéricos que son súper útiles para crear código más flexible.
 
-La verdad es que me gustó más cómo se implementan estos conceptos en Python tiene una sintaxis más limpia.
+Me parecio interesante la programacion orientada a objetivos, y que me gustó más cómo se implementan estos conceptos en Python tiene una sintaxis más limpia.
