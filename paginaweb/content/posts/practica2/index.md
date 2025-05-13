@@ -4,7 +4,7 @@ draft = false
 title = 'Practica 2: Analisis Programacion Orientada a Objetos.'
 +++
 
-# 📋 Reporte: Análisis del código Java sobre Inscripción de Estudiantes
+# 📋 Reporte: Análisis del tres programas relacionados a la POO
 
 ***
 * ### **Docente:** Carlos Gallegos
