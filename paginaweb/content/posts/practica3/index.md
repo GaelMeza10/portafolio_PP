@@ -1,7 +1,7 @@
 +++
 date = '2025-03-12T21:10:19-07:00'
 draft = false
-title = 'Practica 3: Aplicación de Haskell'
+title = 'Practica 3: Funcionamiento de una aplicación de Haskell.'
 +++
 
 # **Reporte: Funcionamiento de una aplicación de Haskell**
@@ -13,9 +13,9 @@ title = 'Practica 3: Aplicación de Haskell'
 ***
 
 ## Introduccion
-En este reporte, voy a hablar sobre **Haskell**, un lenguaje de programación funcional. El objetivo de esta práctica es entender y describir el funcionamiento de una aplicación sencilla tipo *TODO list*. A lo largo del proceso, voy a aprender como funciona este programa que  trabaja con listas, entradas y salidas de datos, y a utilizar **stack**, que es una herramienta que facilita la compilación y ejecución de proyectos en Haskell.
+En este reporte, voy a hablar sobre **Haskell**, un lenguaje de programación funcional. El objetivo de esta práctica es entender y describir el funcionamiento de una aplicación. A lo largo del proceso, voy a aprender como funciona este programa que  trabaja con listas, entradas y salidas de datos, y a utilizar **stack**, que es una herramienta que facilita la compilación y ejecución de proyectos en Haskell.
 
-Para hacer esto, seguí un tutorial online y usé un repositorio de ejemplo para entender cómo interactuar con el programa y gestionar las tareas desde la terminal. Al final, este ejercicio me ayudará a entender mejor cómo funciona Haskell y cómo puedo usarlo para resolver problemas simples en un entorno real.
+Para hacer esto, seguí un tutorial online y usé un repositorio de ejemplo para entender cómo interactuar con el programa y gestionar las tareas desde la terminal. 
 
 ## ¿Qué hice en esta práctica?
 
@@ -43,12 +43,6 @@ El programa principal (`Main.hs`) hace lo siguiente:
    - `c`: Limpia toda la lista.
    - `q`: Sale del programa.
 
-## ¿Cómo lo ejecuté?
-
-1. Instalé **Stack**, una herramienta para compilar y ejecutar proyectos Haskell.
-2. Corrí `stack build` para compilar el proyecto.
-3. Ejecuté el programa con `stack run` o directamente con `./Main.hs` si se le da permiso de ejecución.
-## Explicación de los Archivos
 
 ### 1. **Archivo `spec.hs`**
 Este archivo contiene pruebas unitarias para la función `editIndex`. Verifica que, al editar un índice en una lista de tareas, el cambio se realice correctamente. Usa `assert` para comprobar que la función devuelve el resultado esperado.
@@ -61,11 +55,3 @@ Hice algunas pruebas agregando notas y jugando con los comandos disponibles.
 
 <img src="haskell.jpg" alt="Programa en Haskell" width="650"/>
 
-## Conclusión
-
-Este proyecto fue muy útil para practicar Haskell en un contexto real. Aunque es una aplicación sencilla, cubre muchos aspectos del lenguaje: listas, entrada/salida,etc. También me mostró cómo usar `stack` de manera más práctica.
-
-Aprendí:
-- A manejar entrada del usuario desde consola.
-- A trabajar con listas y patrones en Haskell.
-- A compilar y ejecutar scripts Haskell usando Stack.
