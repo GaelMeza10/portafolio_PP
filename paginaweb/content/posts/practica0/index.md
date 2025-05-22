@@ -1,7 +1,6 @@
 +++
 date = '2025-02-21T10:18:17-08:00'
 draft = false 
-
 title = 'Practica 0: Markdown,Git & Hugo'
 +++
 
