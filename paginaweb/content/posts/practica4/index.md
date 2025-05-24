@@ -1,5 +1,5 @@
 +++
-date = '2025-05-24T21:10:19-07:00'
+date = '2025-05-24T21:10:19-09:00'
 draft = false
 title = 'Practica 4: Prolog'
 +++
